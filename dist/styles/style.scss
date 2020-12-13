@@ -1,5 +1,87 @@
+@import "./grid";
+@import "./variables";
 @import "./header";
 
 * {
-    font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: linear-gradient(180deg, #f6fafd 0%, #fff 19.4%);
+  color: $color1;
+  text-rendering: optimizeLegibility;
+  // overflow-x: hidden;
+  font-size: 18px;
+}
+
+.row {
+  max-width: 1248px;
+  margin: 0 auto;
+}
+
+// HEADINGS
+
+h1,
+h2,
+h3 {
+  font-family: Helvetica;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 110%;
+  color: $color2;
+}
+
+// BUTTONS
+
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: border 0.2s, background-color 0.2s;
+    font-size: 89%;
+    font-weight: 500;
+  }
+}
+
+.btn-full {
+  &:link,
+  &:visited {
+    background-color: $color3;
+    color: #fff;
+  }
+  &:hover,
+  &:active {
+    // border: 1px solid orange;
+    background-color: $color3darker;
+  }
+}
+
+.btn-ghost {
+  &:link,
+  &:visited {
+    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+    background-color: #fff;
+    color: $color2;
+    border: 1px solid #fff;
+    img {
+      vertical-align: middle;
+      height: 18px;
+      margin-left: 10px;
+    }
+  }
+  &:hover,
+  &:active {
+    border: 1px solid $color3;
+  }
 }

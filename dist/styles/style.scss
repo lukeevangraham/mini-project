@@ -109,6 +109,19 @@ h3 {
   }
 }
 
+// LINKS
+
+a {
+  &:link, &:visited {
+    color: $color3;
+    text-decoration: none;
+    transition: color 0.2s
+  }
+  &:hover, &:active {
+    color: $color1
+  }
+}
+
 
 .logo {
   width: 49px;

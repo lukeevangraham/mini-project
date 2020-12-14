@@ -276,10 +276,10 @@ header .heroImage {
   border-radius: 50px;
   height: 709px;
   top: -150px;
-  padding: 109px 0 130px 0;
 }
 
 .section-testimonials h2 {
+  padding-top: 109px;
   color: #fff;
   padding-left: 93px;
 }
@@ -288,16 +288,112 @@ header .heroImage {
   background: #eee;
 }
 
+.section-testimonials .carousel-scope {
+  width: 100%;
+  overflow: hidden;
+  height: 500px;
+}
+
 .section-testimonials .carousel-cell {
-  width: 66%;
+  width: 775px;
   height: 330px;
-  margin-right: 10px;
-  background: #8c8;
-  border-radius: 50px;
+  margin-right: 20px;
+  background: #f7f7f7;
+  border-radius: 60px;
+  padding: 60px 70px 90px 70px;
+}
+
+.section-testimonials .carousel-cell:last-child {
+  margin-right: 500px;
+}
+
+.section-testimonials .carousel-cell ul {
+  margin-top: 30px;
+}
+
+.section-testimonials .carousel-cell li {
+  list-style: none;
+}
+
+.section-testimonials .carousel-cell li:first-child {
+  font-weight: 900;
+  font-size: 110%;
+}
+
+.section-testimonials .carousel-cell p {
+  margin: 25px 10px 30px 0;
+}
+
+.section-testimonials .carousel-cell img {
+  border-radius: 50%;
+  height: 120px;
 }
 
 .section-testimonials .carousel-cell:before {
   display: block;
+}
+
+.section-testimonials .flickity-viewport {
+  -webkit-transform: translateX(95px);
+          transform: translateX(95px);
+}
+
+.section-testimonials .flickity-button {
+  top: 400px;
+  -webkit-transform: translateX(-90px);
+          transform: translateX(-90px);
+  color: white;
+  background: transparent;
+}
+
+.section-testimonials .flickity-button:hover {
+  background: transparent;
+}
+
+.section-testimonials .flickity-prev-next-button {
+  -webkit-transform: none;
+  transform: none;
+  text-align: right;
+  margin-right: 50px;
+  z-index: 101;
+}
+
+.section-testimonials .flickity-prev-next-button.previous {
+  left: auto;
+  right: 60px;
+  z-index: 101;
+}
+
+.section-testimonials .flickity-page-dots {
+  padding-left: 93px;
+  top: 413px;
+  text-align: left;
+  z-index: 101;
+}
+
+.section-testimonials .flickity-page-dots .dot {
+  background: white;
+  opacity: 1;
+}
+
+.section-testimonials .flickity-page-dots .is-selected {
+  background: #F063B8;
+}
+
+.overlay {
+  position: relative;
+  height: 100%;
+}
+
+.overlay:before {
+  z-index: 100;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(156, 105, 226, 0)), color-stop(70%, rgba(156, 105, 226, 0)), color-stop(80%, rgba(156, 105, 226, 0.2)), to(#9c69e2));
+  background-image: linear-gradient(left, rgba(156, 105, 226, 0) 0%, rgba(156, 105, 226, 0) 70%, rgba(156, 105, 226, 0.2) 80%, #9c69e2 100%);
+  border-radius: 50px;
+  content: "\00a0";
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 
 footer {
@@ -479,6 +575,17 @@ h3 {
 
 .btn-ghost:hover, .btn-ghost:active {
   background-color: rgba(197, 197, 197, 0.2);
+}
+
+a:link, a:visited {
+  color: #9C69E2;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+a:hover, a:active {
+  color: #4B5D68;
 }
 
 .logo {

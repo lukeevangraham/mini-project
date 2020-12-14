@@ -1,3 +1,19 @@
+@mixin navItem() {
+  a {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color1;
+      transition: color 0.2s, font-weight 0.2s;
+      &:hover,
+      &.active {
+        color: $color2;
+        font-weight: 800;
+      }
+    }
+  }
+}
+
 header {
   .container {
     height: 754px;
@@ -11,30 +27,6 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    .logo {
-      width: 49px;
-      height: 35px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-
-      .rectangle1 {
-        position: relative;
-        background: $color3;
-        border-radius: 20px;
-        width: 20px;
-        height: 20px;
-      }
-      .rectangle2 {
-        position: relative;
-        border-radius: 20px;
-        content: "";
-        background: $color4;
-        width: 20px;
-        height: 35px;
-      }
-    }
-
     ul {
       list-style: none;
       width: 375px;
@@ -46,19 +38,20 @@ header {
       font-size: 89%;
       line-height: 160%;
       li {
-        a {
-          &:link,
-          &:visited {
-            text-decoration: none;
-            color: $color1;
-            transition: color 0.2s, font-weight 0.2s;
-            &:hover,
-            &.active {
-              color: $color2;
-              font-weight: 800;
-            }
-          }
-        }
+        @include navItem()
+        // a {
+        //   &:link,
+        //   &:visited {
+        //     text-decoration: none;
+        //     color: $color1;
+        //     transition: color 0.2s, font-weight 0.2s;
+        //     &:hover,
+        //     &.active {
+        //       color: $color2;
+        //       font-weight: 800;
+        //     }
+        //   }
+        // }
       }
     }
   }
@@ -82,4 +75,3 @@ header {
     left: 400px;
   }
 }
-

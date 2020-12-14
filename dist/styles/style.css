@@ -116,37 +116,6 @@ header nav {
           justify-content: space-between;
 }
 
-header nav .logo {
-  width: 49px;
-  height: 35px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-header nav .logo .rectangle1 {
-  position: relative;
-  background: #9C69E2;
-  border-radius: 20px;
-  width: 20px;
-  height: 20px;
-}
-
-header nav .logo .rectangle2 {
-  position: relative;
-  border-radius: 20px;
-  content: "";
-  background: #F063B8;
-  width: 20px;
-  height: 35px;
-}
-
 header nav ul {
   list-style: none;
   width: 375px;
@@ -301,6 +270,114 @@ header .heroImage {
   color: #9C69E2;
 }
 
+.section-testimonials {
+  position: relative;
+  background: #9C69E2;
+  border-radius: 50px;
+  height: 709px;
+  top: -150px;
+  padding: 109px 0 130px 93px;
+}
+
+.section-testimonials h2 {
+  color: #fff;
+}
+
+.section-testimonials .testimonyCard {
+  background: white;
+  width: 645px;
+  height: 330px;
+  border-radius: 50px;
+}
+
+footer {
+  padding: 100px 0 !important;
+}
+
+footer .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .top .btn-full:link, footer .top .btn-full:visited {
+  background-color: #F063B8;
+}
+
+footer .top .btn-full:link:hover, footer .top .btn-full:visited:hover {
+  background-color: #d85fa8;
+}
+
+footer .bottom {
+  padding-top: 200px;
+}
+
+footer .bottom .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 900;
+  font-size: 111%;
+}
+
+footer .bottom .brand .logo {
+  margin-right: 15px;
+}
+
+footer .bottom .address {
+  padding: 67px 0 10px 0;
+  line-height: 180%;
+}
+
+footer .bottom .footerAddress {
+  list-style: none;
+  font-weight: 400;
+  line-height: 180%;
+}
+
+footer .bottom .linkHeader {
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 90%;
+}
+
+footer .bottom li {
+  list-style: none;
+  line-height: 250%;
+  font-weight: 400;
+}
+
+footer .bottom li a:link, footer .bottom li a:visited {
+  text-decoration: none;
+  color: #4B5D68;
+  -webkit-transition: color 0.2s, font-weight 0.2s;
+  transition: color 0.2s, font-weight 0.2s;
+}
+
+footer .bottom li a:link:hover, footer .bottom li a:link.active, footer .bottom li a:visited:hover, footer .bottom li a:visited.active {
+  color: #212353;
+  font-weight: 800;
+}
+
+footer .bottom .socialLinks li {
+  display: inline-block;
+  list-style: none;
+  background: rgba(33, 35, 83, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 14px;
+  content: "";
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -322,6 +399,12 @@ body {
 .row {
   max-width: 1248px;
   margin: 0 auto;
+}
+
+hr {
+  height: 2px;
+  background-color: rgba(156, 105, 226, 0.2);
+  border: none;
 }
 
 h1,
@@ -386,5 +469,36 @@ h3 {
 
 .btn-ghost:hover, .btn-ghost:active {
   background-color: rgba(197, 197, 197, 0.2);
+}
+
+.logo {
+  width: 49px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.logo .rectangle1 {
+  position: relative;
+  background: #9C69E2;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.logo .rectangle2 {
+  position: relative;
+  border-radius: 20px;
+  content: "";
+  background: #F063B8;
+  width: 20px;
+  height: 35px;
 }
 /*# sourceMappingURL=style.css.map */

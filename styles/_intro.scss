@@ -1,0 +1,15 @@
+.section-intro {
+  width: 1117px;
+  height: 560px;
+  background: rgba(240, 99, 184, 0.15);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -400px;
+  padding: 92px;
+  img {
+    position: relative;
+    left: -15%;
+  }
+}

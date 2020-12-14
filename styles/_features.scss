@@ -1,0 +1,66 @@
+.section-features {
+  position: relative;
+  top: -275px;
+  text-align: center;
+  .topP {
+    width: 584px;
+    text-align: center;
+    margin: 0 auto 40px auto;
+  }
+  .featureCard {
+    margin: 27px 0;
+    height: 358px;
+    padding: 6% 2%;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 78%;
+    background-position: right;
+    border-radius: 50px;
+    .featureImg {
+      flex-grow: 1;
+      width: 0;
+    }
+    .featureText {
+      margin-left: 40px;
+      text-align: left;
+      flex-grow: 1;
+      width: 0;
+    }
+    &:nth-of-type(1) {
+      background-image: url("../img/rectangle39.svg");
+    }
+    &:nth-of-type(2) {
+      background-image: url("../img/rectangle40.svg");
+    }
+    &:nth-of-type(3) {
+      background-image: url("../img/rectangle41.svg");
+      margin-left: 0;
+      clear: both;
+    }
+    &:nth-of-type(4) {
+      background-image: url("../img/rectangle42.svg");
+    }
+    p {
+      margin-bottom: 30px;
+    }
+    .learnLink {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      color: $color2;
+      transition: color 0.2s;
+      img {
+        vertical-align: middle;
+        padding-bottom: 2px;
+        height: 16px;
+        margin-left: 10px;
+      }
+      &:hover,
+      &:active {
+          color: $color3;
+      }
+    }
+  }
+}

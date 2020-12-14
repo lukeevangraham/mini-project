@@ -571,6 +571,8 @@ h3 {
   vertical-align: middle;
   height: 18px;
   margin-left: 10px;
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
 }
 
 .btn-ghost:hover, .btn-ghost:active {
@@ -617,5 +619,10 @@ a:hover, a:active {
   background: #F063B8;
   width: 20px;
   height: 35px;
+}
+
+.forwardArrow {
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
 }
 /*# sourceMappingURL=style.css.map */

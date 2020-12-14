@@ -1,17 +1,54 @@
 .section-testimonials {
-    position: relative;
-    background: $color3;
-    border-radius: 50px;
-height: 709px;
-top: -150px;
-padding: 109px 0 130px 93px;
-h2 {
+  position: relative;
+  background: $color3;
+  border-radius: 50px;
+  height: 709px;
+  top: -150px;
+  padding: 109px 0 130px 93px;
+  h2 {
     color: #fff;
-}
-.testimonyCard {
-    background: white;
-    width: 645px;
-    height: 330px;
-    border-radius: 50px;
-}
+  }
+
+  .carousel-wrapper {
+    overflow: hidden;
+    width: 90%;
+    .carousel {
+      transform-style: preserve-3d;
+    }
+
+    .testimonyCard {
+      background-color: salmon;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 330px;
+      margin: auto;
+      padding: 1rem 4rem;
+      z-index: 100;
+      transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+      &.initial,
+      &.active {
+        opacity: 1;
+        position: relative;
+        z-index: 900;
+      }
+      &.prev,
+      &.next {
+        z-index: 800;
+      }
+      &.prev {
+        transform: translateX(-100%); /* Move 'prev' item to the left */
+      }
+      &.next {
+        transform: translateX(100%); /* Move 'next' item to the right */
+      }
+      //   background: white;
+      //   width: 645px;
+      //   height: 330px;
+        border-radius: 50px;
+    }
+    // .carousel__buton--next {
+    // }
+  }
 }

@@ -283,11 +283,53 @@ header .heroImage {
   color: #fff;
 }
 
-.section-testimonials .testimonyCard {
-  background: white;
-  width: 645px;
+.section-testimonials .carousel-wrapper {
+  overflow: hidden;
+  width: 90%;
+}
+
+.section-testimonials .carousel-wrapper .carousel {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.section-testimonials .carousel-wrapper .testimonyCard {
+  background-color: salmon;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
   height: 330px;
+  margin: auto;
+  padding: 1rem 4rem;
+  z-index: 100;
+  -webkit-transition: opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+  transition: transform 0.5s, opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
   border-radius: 50px;
+}
+
+.section-testimonials .carousel-wrapper .testimonyCard.initial, .section-testimonials .carousel-wrapper .testimonyCard.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+.section-testimonials .carousel-wrapper .testimonyCard.prev, .section-testimonials .carousel-wrapper .testimonyCard.next {
+  z-index: 800;
+}
+
+.section-testimonials .carousel-wrapper .testimonyCard.prev {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  /* Move 'prev' item to the left */
+}
+
+.section-testimonials .carousel-wrapper .testimonyCard.next {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  /* Move 'next' item to the right */
 }
 
 footer {

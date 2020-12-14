@@ -1,8 +1,9 @@
 header {
-  height: 754px;
-  display: flex;
-  flex-direction: column;
-  // justify-content: space-between;
+  .container {
+    height: 754px;
+    display: flex;
+    flex-direction: column;
+  }
   nav {
     height: 60px;
     padding-top: 47px;
@@ -73,12 +74,12 @@ header {
       line-height: 160%;
     }
   }
+  .heroImage {
+    position: relative;
+    width: 885px;
+    height: 468px;
+    top: -475px;
+    left: 400px;
+  }
 }
 
-.heroImage {
-  position: relative;
-  width: 885px;
-  height: 468px;
-  top: -475px;
-  left: 575px;
-}

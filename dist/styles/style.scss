@@ -100,6 +100,7 @@ h3 {
       vertical-align: middle;
       height: 18px;
       margin-left: 10px;
+      transform: scale(-1);
     }
   }
   &:hover,
@@ -145,4 +146,8 @@ a {
     width: 20px;
     height: 35px;
   }
+}
+
+.forwardArrow {
+  transform: scale(-1);
 }

@@ -9,64 +9,22 @@
     color: #fff;
     padding-left: 93px;
   }
+  .carousel {
+    background: #eee;
+    // padding-left: 30px;
+  }
 
-  .carousel-wrapper {
-    overflow: hidden;
-    width: 100%;
-    margin: 0;
-    .carousel {
-      display: flex;
-      //   transform-style: preserve-3d;
-      //   width: 645px;
-      //   padding-left: 93px;
+  .carousel-cell {
+    width: 66%;
+    height: 330px;
+    margin-right: 10px;
+    background: #8c8;
+    border-radius: 50px;
+    &:before {
+      display: block;
+      // text-align: c;
+      // line-height: 200px;
     }
+  }
 
-    .testimonyCard {
-      flex-shrink: 0;
-      background-color: salmon;
-        opacity: 0;
-      position: absolute;
-      top: 200px;
-      //   width: 90%;
-      height: 330px;
-      margin-right: 20px;
-      //   margin: auto;
-      padding: 1rem 4rem;
-      z-index: 100;
-      transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
-      &.initial,
-      &.active {
-        opacity: 1;
-        // position: relative;
-        margin-left: 93px;
-        z-index: 900;
-      }
-      &.prev,
-      &.next {
-        z-index: 900;
-      }
-      &.prev {
-        transform: translateX(-645px); /* Move 'prev' item to the left */
-        left: 67px;
-        background-color: red;
-        opacity: 1;
-    }
-    &.next {
-          opacity: 1;
-        transform: translateX(645px); /* Move 'next' item to the right */
-        left: 120px;
-      }
-      width: 645px;
-      border-radius: 50px;
-    }
-  }
-  .carousel__buton--next {
-    position: absolute;
-    top: 600px;
-  }
-  .carousel__buton--prev {
-    position: absolute;
-    top: 600px;
-    left: 90px
-  }
 }

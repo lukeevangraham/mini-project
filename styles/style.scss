@@ -3,6 +3,8 @@
 @import "./header";
 @import "./intro";
 @import "./features";
+@import "./testimonials";
+@import "./footer";
 
 * {
   margin: 0;
@@ -24,6 +26,12 @@ body {
 .row {
   max-width: 1248px;
   margin: 0 auto;
+}
+
+hr {
+  height: 2px;
+  background-color: rgba($color3, 0.2);
+  border: none;
 }
 
 // HEADINGS
@@ -98,5 +106,30 @@ h3 {
   &:active {
     // border: 1px solid $color3;
     background-color: rgba($color: #c5c5c5, $alpha: 0.2);
+  }
+}
+
+
+.logo {
+  width: 49px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .rectangle1 {
+    position: relative;
+    background: $color3;
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+  }
+  .rectangle2 {
+    position: relative;
+    border-radius: 20px;
+    content: "";
+    background: $color4;
+    width: 20px;
+    height: 35px;
   }
 }

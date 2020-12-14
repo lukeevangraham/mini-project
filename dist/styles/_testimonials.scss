@@ -4,51 +4,69 @@
   border-radius: 50px;
   height: 709px;
   top: -150px;
-  padding: 109px 0 130px 93px;
+  padding: 109px 0 130px 0;
   h2 {
     color: #fff;
+    padding-left: 93px;
   }
 
   .carousel-wrapper {
     overflow: hidden;
-    width: 90%;
+    width: 100%;
+    margin: 0;
     .carousel {
-      transform-style: preserve-3d;
+      display: flex;
+      //   transform-style: preserve-3d;
+      //   width: 645px;
+      //   padding-left: 93px;
     }
 
     .testimonyCard {
+      flex-shrink: 0;
       background-color: salmon;
-      opacity: 0;
+        opacity: 0;
       position: absolute;
-      top: 0;
-      width: 100%;
+      top: 200px;
+      //   width: 90%;
       height: 330px;
-      margin: auto;
+      margin-right: 20px;
+      //   margin: auto;
       padding: 1rem 4rem;
       z-index: 100;
       transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
       &.initial,
       &.active {
         opacity: 1;
-        position: relative;
+        // position: relative;
+        margin-left: 93px;
         z-index: 900;
       }
       &.prev,
       &.next {
-        z-index: 800;
+        z-index: 900;
       }
       &.prev {
-        transform: translateX(-100%); /* Move 'prev' item to the left */
-      }
-      &.next {
-        transform: translateX(100%); /* Move 'next' item to the right */
-      }
-      //   background: white;
-      //   width: 645px;
-      //   height: 330px;
-        border-radius: 50px;
+        transform: translateX(-645px); /* Move 'prev' item to the left */
+        left: 67px;
+        background-color: red;
+        opacity: 1;
     }
-    // .carousel__buton--next {
-    // }
+    &.next {
+          opacity: 1;
+        transform: translateX(645px); /* Move 'next' item to the right */
+        left: 120px;
+      }
+      width: 645px;
+      border-radius: 50px;
+    }
+  }
+  .carousel__buton--next {
+    position: absolute;
+    top: 600px;
+  }
+  .carousel__buton--prev {
+    position: absolute;
+    top: 600px;
+    left: 90px
   }
 }

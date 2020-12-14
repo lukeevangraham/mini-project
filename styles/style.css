@@ -284,73 +284,20 @@ header .heroImage {
   padding-left: 93px;
 }
 
-.section-testimonials .carousel-wrapper {
-  overflow: hidden;
-  width: 100%;
-  margin: 0;
+.section-testimonials .carousel {
+  background: #eee;
 }
 
-.section-testimonials .carousel-wrapper .carousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.section-testimonials .carousel-wrapper .testimonyCard {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  background-color: salmon;
-  opacity: 0;
-  position: absolute;
-  top: 200px;
+.section-testimonials .carousel-cell {
+  width: 66%;
   height: 330px;
-  margin-right: 20px;
-  padding: 1rem 4rem;
-  z-index: 100;
-  -webkit-transition: opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
-  transition: opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
-  transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
-  transition: transform 0.5s, opacity 0.5s, z-index 0.5s, -webkit-transform 0.5s;
-  width: 645px;
+  margin-right: 10px;
+  background: #8c8;
   border-radius: 50px;
 }
 
-.section-testimonials .carousel-wrapper .testimonyCard.initial, .section-testimonials .carousel-wrapper .testimonyCard.active {
-  opacity: 1;
-  margin-left: 93px;
-  z-index: 900;
-}
-
-.section-testimonials .carousel-wrapper .testimonyCard.prev, .section-testimonials .carousel-wrapper .testimonyCard.next {
-  z-index: 900;
-}
-
-.section-testimonials .carousel-wrapper .testimonyCard.prev {
-  -webkit-transform: translateX(-645px);
-          transform: translateX(-645px);
-  /* Move 'prev' item to the left */
-  left: 67px;
-  background-color: red;
-  opacity: 1;
-}
-
-.section-testimonials .carousel-wrapper .testimonyCard.next {
-  opacity: 1;
-  -webkit-transform: translateX(645px);
-          transform: translateX(645px);
-  /* Move 'next' item to the right */
-  left: 120px;
-}
-
-.section-testimonials .carousel__buton--next {
-  position: absolute;
-  top: 600px;
-}
-
-.section-testimonials .carousel__buton--prev {
-  position: absolute;
-  top: 600px;
-  left: 90px;
+.section-testimonials .carousel-cell:before {
+  display: block;
 }
 
 footer {

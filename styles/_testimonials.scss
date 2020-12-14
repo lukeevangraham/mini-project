@@ -4,22 +4,51 @@
   border-radius: 50px;
   height: 709px;
   top: -150px;
-  padding: 109px 0 130px 0;
+
   h2 {
+    padding-top: 109px;
     color: #fff;
     padding-left: 93px;
   }
   .carousel {
     background: #eee;
+    // width: 800px;
     // padding-left: 30px;
   }
 
+  .carousel-scope {
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+  }
+
   .carousel-cell {
-    width: 66%;
+    width: 775px;
     height: 330px;
-    margin-right: 10px;
-    background: #8c8;
-    border-radius: 50px;
+    margin-right: 20px;
+    background: rgb(247, 247, 247);
+    border-radius: 60px;
+    padding: 60px 70px 90px 70px;
+    &:last-child {
+      margin-right: 500px;
+    }
+    ul {
+      margin-top: 30px;
+    }
+    li {
+      list-style: none;
+      &:first-child {
+        font-weight: 900;
+        font-size: 110%;
+      }
+    }
+    p {
+      margin: 25px 10px 30px 0;
+    }
+    img {
+      border-radius: 50%;
+      height: 120px;
+    }
     &:before {
       display: block;
       // text-align: c;
@@ -27,4 +56,67 @@
     }
   }
 
+  .flickity-viewport {
+    transform: translateX(95px);
+  }
+
+  .flickity-button {
+    top: 400px;
+    transform: translateX(-90px);
+    color: white;
+    // padding: 0 60px;
+    // left: 20px;
+    background: transparent;
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  .flickity-prev-next-button {
+    -webkit-transform: none;
+    transform: none;
+    text-align: right;
+    margin-right: 50px;
+    // left: -100px;
+    z-index: 101;
+  }
+  .flickity-prev-next-button.previous {
+    left: auto;
+    right: 60px;
+    z-index: 101;
+  }
+  .flickity-page-dots {
+    padding-left: 93px;
+    top: 413px;
+    text-align: left;
+    z-index: 101;
+    .dot {
+      background: white;
+      opacity: 1;
+    };
+    .is-selected {
+      background: $color4;
+    }
+  }
+}
+
+.overlay {
+  position: relative;
+  height: 100%;
+  // padding: 109px 0 130px 0;
+  &:before {
+    z-index: 100;
+    background-image: linear-gradient(
+      left,
+      rgba($color3, 0) 0%,
+      rgba($color3, 0) 70%,
+      rgba($color3, .2) 80%,
+      rgba($color3, 1) 100%
+    );
+    border-radius: 50px;
+    content: "\00a0";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
 }

@@ -103,8 +103,7 @@ header .container {
 }
 
 header nav {
-  height: 60px;
-  padding-top: 47px;
+  padding: 35px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,6 +116,8 @@ header nav {
 }
 
 header nav ul {
+  -ms-grid-row-align: center;
+      align-self: center;
   list-style: none;
   width: 375px;
   display: -ms-grid;
@@ -157,7 +158,6 @@ header .hero-text-box p {
 header .heroImage {
   position: relative;
   width: 885px;
-  height: 468px;
   top: -475px;
   left: 400px;
 }
@@ -252,7 +252,7 @@ header .heroImage {
 .section-features .featureCard .learnLink {
   display: inline-block;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 90%;
   font-weight: 500;
   color: #212353;
   -webkit-transition: color 0.2s;
@@ -260,8 +260,9 @@ header .heroImage {
 }
 
 .section-features .featureCard .learnLink img {
+  position: relative;
+  top: -1px;
   vertical-align: middle;
-  padding-bottom: 2px;
   height: 16px;
   margin-left: 10px;
 }
@@ -484,6 +485,135 @@ footer .bottom .socialLinks li {
   content: "";
 }
 
+/* Big tablet to 1308 (width smaller than the 1140 pixel row) */
+@media only screen and (max-width: 1308px) {
+  .row {
+    padding: 0 2%;
+  }
+  header nav ul {
+    margin-right: 5rem;
+  }
+  .heroImage {
+    width: 600px !important;
+    top: -425px !important;
+    left: 525px !important;
+  }
+}
+
+@media only screen and (max-width: 1166px) {
+  .heroImage {
+    width: 600px !important;
+    left: 385px !important;
+  }
+}
+
+/* Small tablet to big tablet: 768 to 1023px */
+@media only screen and (max-width: 1023px) {
+  body {
+    font-size: 16px !important;
+  }
+  section {
+    padding: 60px 0 !important;
+  }
+  h1 {
+    font-size: 350% !important;
+  }
+  .hero-text-box {
+    width: 475px !important;
+  }
+  .heroImage {
+    width: 400px !important;
+    left: 420px !important;
+  }
+  .section-intro {
+    top: -250px !important;
+  }
+}
+
+@media only screen and (max-width: 854px) {
+  .heroImage {
+    width: 375px !important;
+    top: -345px !important;
+    left: 350px !important;
+  }
+}
+
+/* SMALL PHONES to small tables: from 481 to 767px */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 15px !important;
+  }
+  h1 {
+    font-size: 250% !important;
+  }
+  header .container {
+    height: 600px;
+  }
+  header nav {
+    padding: 15px 0;
+  }
+  header nav .logo {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  header nav ul {
+    gap: 0 !important;
+    padding: 10px 0;
+    margin-right: unset;
+    height: 40px;
+    display: block;
+    width: unset;
+  }
+  header nav ul li {
+    font-size: 120%;
+  }
+  header nav .btn:link, header nav .btn:visited {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  header nav .btn:link img, header nav .btn:visited img {
+    height: 15px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  header nav .main-nav {
+    -webkit-transition: height .25s ease;
+    transition: height .25s ease;
+    overflow: hidden;
+  }
+  header nav .main-nav:not(.active) {
+    display: none;
+  }
+  header nav .mobile-nav-icon {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    display: inline-block;
+  }
+  header nav .mobile-nav-icon img {
+    width: 34px;
+  }
+  .hero-text-box,
+  .hero-text-box p {
+    width: 300px !important;
+  }
+  .heroImage {
+    width: 275px !important;
+    top: -370px !important;
+    left: 300px !important;
+  }
+  .section-intro {
+    top: -130px !important;
+  }
+}
+
+/* SMALL PHONES: from 0 to 480px */
 * {
   margin: 0;
   padding: 0;
@@ -524,14 +654,14 @@ h3 {
 h1 {
   font-style: normal;
   font-weight: bold;
-  font-size: 80px;
+  font-size: 445%;
   line-height: 110%;
 }
 
 h2 {
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 222%;
   line-height: 130%;
   margin-bottom: 30px;
 }

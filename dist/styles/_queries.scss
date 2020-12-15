@@ -1,0 +1,136 @@
+/* Big tablet to 1308 (width smaller than the 1140 pixel row) */
+
+@media only screen and (max-width: 1308px) {
+  .row {
+    padding: 0 2%;
+  }
+  header nav ul {
+    margin-right: 5rem;
+  }
+  .heroImage {
+    width: 600px !important;
+    top: -425px !important;
+    left: 525px !important;
+  }
+}
+
+@media only screen and (max-width: 1166px) {
+  .heroImage {
+    width: 600px !important;
+    left: 385px !important;
+  }
+}
+
+/* Small tablet to big tablet: 768 to 1023px */
+
+@media only screen and (max-width: 1023px) {
+  body {
+    font-size: 16px !important;
+  }
+  section {
+    padding: 60px 0 !important;
+  }
+  h1 {
+    font-size: 350% !important;
+  }
+  .hero-text-box {
+    width: 475px !important;
+  }
+  .heroImage {
+    width: 400px !important;
+    left: 420px !important;
+  }
+  .section-intro {
+    top: -250px !important;
+  }
+}
+
+@media only screen and (max-width: 854px) {
+  .heroImage {
+    width: 375px !important;
+    top: -345px !important;
+    left: 350px !important;
+  }
+}
+
+/* SMALL PHONES to small tables: from 481 to 767px */
+
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 15px !important;
+  }
+  h1 {
+    font-size: 250% !important;
+  }
+  header {
+    .container {
+      height: 600px;
+    }
+    nav {
+      .logo {
+        align-self: flex-start;
+      }
+      padding: 15px 0;
+      ul {
+        gap: 0 !important;
+        // margin-top: 40px;
+        padding: 10px 0;
+        margin-right: unset;
+        height: 40px;
+        display: block;
+        width: unset;
+        li {
+          font-size: 120%;
+        }
+      }
+      .btn {
+        // align-self: flex-start;
+        &:link,
+        &:visited {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          overflow: hidden;
+          white-space: nowrap;
+          img {
+            height: 15px;
+            flex-shrink: 0;
+            // display: none;
+          }
+        }
+      }
+      .main-nav {
+        transition: height .25s ease;
+        overflow: hidden;
+        &:not(.active) {
+          display: none;
+        }
+      }
+      .mobile-nav-icon {
+        align-self: flex-start;
+        display: inline-block;
+        img {
+          width: 34px;
+          // height: 100px;
+        }
+      }
+    }
+  }
+  .hero-text-box,
+  .hero-text-box p {
+    width: 300px !important;
+  }
+  .heroImage {
+    width: 275px !important;
+    top: -370px !important;
+    left: 300px !important;
+  }
+  .section-intro {
+    top: -130px !important;
+  }
+}
+
+/* SMALL PHONES: from 0 to 480px */
+
+@media only screen and (max-width: 480px) {
+}

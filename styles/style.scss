@@ -5,6 +5,7 @@
 @import "./features";
 @import "./testimonials";
 @import "./footer";
+@import "./queries";
 
 * {
   margin: 0;
@@ -46,13 +47,13 @@ h3 {
 h1 {
   font-style: normal;
   font-weight: bold;
-  font-size: 80px;
+  font-size: 445%;
   line-height: 110%;
 }
 h2 {
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 222%;
   line-height: 130%;
   margin-bottom: 30px;
 }

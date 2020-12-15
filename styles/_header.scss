@@ -21,13 +21,14 @@ header {
     flex-direction: column;
   }
   nav {
-    height: 60px;
-    padding-top: 47px;
+    // height: 60px;
+    padding: 35px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     ul {
+      align-self: center;
       list-style: none;
       width: 375px;
       display: grid;
@@ -70,7 +71,7 @@ header {
   .heroImage {
     position: relative;
     width: 885px;
-    height: 468px;
+    // height: 468px;
     top: -475px;
     left: 400px;
   }

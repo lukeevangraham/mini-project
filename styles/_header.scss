@@ -22,7 +22,8 @@ header {
   }
   .navContainer {
     // height: 60px;
-    padding: 15px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -30,7 +31,7 @@ header {
       align-self: center;
     }
 
-    ul {
+    .main-nav {
       align-self: center;
       list-style: none;
       width: 375px;
@@ -38,9 +39,12 @@ header {
       gap: 1rem;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       text-align: center;
-      margin: 0 20rem 0 0;
       font-size: 89%;
       line-height: 160%;
+      &.active {
+        display: block !important;
+        text-align: right;
+      }
       li {
         @include navItem() // a {
           //   &:link,
@@ -91,10 +95,10 @@ header {
     }
   }
   .heroImage {
-    position: relative;
+    position: absolute;
     width: 885px;
     // height: 468px;
-    top: -475px;
-    left: 400px;
+    top: 365px;
+    left: 375px;
   }
 }

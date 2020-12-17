@@ -103,7 +103,8 @@ header .container {
 }
 
 header .navContainer {
-  padding: 15px 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,7 +122,7 @@ header .navContainer .logo {
       align-self: center;
 }
 
-header .navContainer ul {
+header .navContainer .main-nav {
   -ms-grid-row-align: center;
       align-self: center;
   list-style: none;
@@ -132,19 +133,23 @@ header .navContainer ul {
   -ms-grid-columns: (minmax(0, 1fr))[4];
       grid-template-columns: repeat(4, minmax(0, 1fr));
   text-align: center;
-  margin: 0 20rem 0 0;
   font-size: 89%;
   line-height: 160%;
 }
 
-header .navContainer ul li a:link, header .navContainer ul li a:visited {
+header .navContainer .main-nav.active {
+  display: block !important;
+  text-align: right;
+}
+
+header .navContainer .main-nav li a:link, header .navContainer .main-nav li a:visited {
   text-decoration: none;
   color: #4B5D68;
   -webkit-transition: color 0.2s, font-weight 0.2s;
   transition: color 0.2s, font-weight 0.2s;
 }
 
-header .navContainer ul li a:link:hover, header .navContainer ul li a:link.active, header .navContainer ul li a:visited:hover, header .navContainer ul li a:visited.active {
+header .navContainer .main-nav li a:link:hover, header .navContainer .main-nav li a:link.active, header .navContainer .main-nav li a:visited:hover, header .navContainer .main-nav li a:visited.active {
   color: #212353;
   font-weight: 800;
 }
@@ -188,10 +193,10 @@ header .hero-text-box p {
 }
 
 header .heroImage {
-  position: relative;
+  position: absolute;
   width: 885px;
-  top: -475px;
-  left: 400px;
+  top: 365px;
+  left: 375px;
 }
 
 .section-intro {
@@ -205,8 +210,6 @@ header .heroImage {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  top: -400px;
   padding: 92px;
 }
 
@@ -216,8 +219,6 @@ header .heroImage {
 }
 
 .section-features {
-  position: relative;
-  top: -275px;
   text-align: center;
 }
 
@@ -304,11 +305,9 @@ header .heroImage {
 }
 
 .section-testimonials {
-  position: relative;
   background: #9C69E2;
   border-radius: 50px;
   height: 709px;
-  top: -150px;
 }
 
 .section-testimonials h2 {
@@ -527,8 +526,8 @@ footer .bottom .socialLinks li {
   }
   .heroImage {
     width: 600px !important;
-    top: -425px !important;
-    left: 525px !important;
+    top: 350px !important;
+    left: 475px !important;
   }
 }
 
@@ -565,8 +564,8 @@ footer .bottom .socialLinks li {
 @media only screen and (max-width: 854px) {
   .heroImage {
     width: 375px !important;
-    top: -345px !important;
-    left: 350px !important;
+    top: 400px !important;
+    left: 375px !important;
   }
 }
 
@@ -575,20 +574,20 @@ footer .bottom .socialLinks li {
   body {
     font-size: 15px !important;
   }
+  .col {
+    width: 100%;
+    margin: 0 0 4% 0;
+  }
   h1 {
     font-size: 250% !important;
   }
   header .container {
     height: 600px;
   }
-  header nav {
-    padding: 15px 0;
-  }
   header nav ul {
     gap: 0 !important;
     padding: 10px 0;
     margin-right: unset;
-    height: 40px;
     display: block;
     width: unset;
   }
@@ -622,23 +621,35 @@ footer .bottom .socialLinks li {
   header nav .main-nav:not(.active) {
     display: none;
   }
+  header nav .main-nav.active {
+    width: unset;
+  }
   header nav .mobile-nav-icon {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
-    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   header nav .mobile-nav-icon img {
     width: 34px;
   }
+  .remainingHeader {
+    margin-top: -150px !important;
+  }
   .hero-text-box,
   .hero-text-box p {
-    width: 300px !important;
+    width: 100% !important;
   }
   .heroImage {
-    width: 275px !important;
-    top: -370px !important;
-    left: 300px !important;
+    width: 400px !important;
+    top: 450px !important;
+    left: 15% !important;
+    margin: auto;
   }
   .section-intro {
     top: -130px !important;
@@ -646,6 +657,14 @@ footer .bottom .socialLinks li {
 }
 
 /* SMALL PHONES: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+  .heroImage {
+    width: 290px !important;
+    left: 7% !important;
+    top: 500px !important;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -667,6 +686,10 @@ body {
 .row {
   max-width: 1248px;
   margin: 0 auto;
+}
+
+.section {
+  padding: 80px 0;
 }
 
 hr {

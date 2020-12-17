@@ -24,6 +24,7 @@
     "babel-preset-env": "^1.7.0",
     "flickity": "^2.2.1",
     "html-webpack-plugin": "^4.5.0",
+    "waypoints": "^4.0.1",
     "webpack": "^5.10.1",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"

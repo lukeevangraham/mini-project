@@ -1,4 +1,20 @@
+import 'waypoints/lib/noframework.waypoints'
+
+
+
 // FOR THE STICKY NAV
+const waypoint = new Waypoint({
+  element: document.querySelector(".js--section-intro"),
+  handler: (direction) => {
+    if (direction == "down") {
+      console.log("TAG NAME: ", document.getElementsByTagName("nav"))
+      document.querySelector('.nav').classList.add("sticky")
+    } else {
+      document.querySelector('.nav').classList.remove("sticky")
+    }
+  }
+})
+
 // document.querySelector(".js--section-intro").waypoint(
 //   function (direction) {
 //     if (direction == "down") {
@@ -36,6 +52,8 @@ document.querySelector(".js--nav-icon").addEventListener("click", (e) => {
 
   if (!nav.classList.contains("active")) {
     nav.classList.add("active");
+    document.querySelector(".mobile-nav-icon").style.alignSelf = "flex-start"
+    nav.style.order = "3";
     nav.style.height = "auto";
 
     let height = nav.clientHeight + "px";

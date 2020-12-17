@@ -1,19 +1,16 @@
-import 'waypoints/lib/noframework.waypoints'
-
-
+import "waypoints/lib/noframework.waypoints";
 
 // FOR THE STICKY NAV
 const waypoint = new Waypoint({
   element: document.querySelector(".js--section-intro"),
   handler: (direction) => {
     if (direction == "down") {
-      console.log("TAG NAME: ", document.getElementsByTagName("nav"))
-      document.querySelector('.nav').classList.add("sticky")
+      document.querySelector(".nav").classList.add("sticky");
     } else {
-      document.querySelector('.nav').classList.remove("sticky")
+      document.querySelector(".nav").classList.remove("sticky");
     }
-  }
-})
+  },
+});
 
 // document.querySelector(".js--section-intro").waypoint(
 //   function (direction) {
@@ -52,11 +49,14 @@ document.querySelector(".js--nav-icon").addEventListener("click", (e) => {
 
   if (!nav.classList.contains("active")) {
     nav.classList.add("active");
-    document.querySelector(".mobile-nav-icon").style.alignSelf = "flex-start"
+    document.querySelector(".mobile-nav-icon").style.alignSelf = "flex-start";
+    document.querySelector(".logo").style.alignSelf = "flex-start";
+    document.querySelector(".logo").style.marginRight = "15px";
     nav.style.order = "3";
     nav.style.height = "auto";
 
     let height = nav.clientHeight + "px";
+    console.log("HEIGHT: ", height);
 
     nav.style.height = "0px";
 
@@ -64,12 +64,16 @@ document.querySelector(".js--nav-icon").addEventListener("click", (e) => {
       nav.style.height = height;
     }, 0);
   } else {
-    nav.style.height = "0px";
+    nav.style.height = "25px";
 
     nav.addEventListener(
       "transitionend",
       function () {
         nav.classList.remove("active");
+        document.querySelector(".mobile-nav-icon").style.alignSelf = "unset";
+        document.querySelector(".logo").style.margin = "0px";
+        document.querySelector(".logo").style.alignSelf = "center";
+        nav.style.order = "unset";
       },
       {
         once: true,

@@ -9,8 +9,8 @@
   }
   .heroImage {
     width: 600px !important;
-    top: -425px !important;
-    left: 525px !important;
+    top: 350px !important;
+    left: 475px !important;
   }
 }
 
@@ -48,8 +48,8 @@
 @media only screen and (max-width: 854px) {
   .heroImage {
     width: 375px !important;
-    top: -345px !important;
-    left: 350px !important;
+    top: 400px !important;
+    left: 375px !important;
   }
 }
 
@@ -59,6 +59,10 @@
   body {
     font-size: 15px !important;
   }
+  .col {
+    width: 100%;
+    margin: 0 0 4% 0;
+  }
   h1 {
     font-size: 250% !important;
   }
@@ -67,13 +71,13 @@
       height: 600px;
     }
     nav {
-      padding: 15px 0;
+      // padding: 15px 0;
       ul {
         gap: 0 !important;
         // margin-top: 40px;
         padding: 10px 0;
         margin-right: unset;
-        height: 40px;
+        // height: 40px;
         display: block;
         width: unset;
         li {
@@ -105,24 +109,32 @@
         &:not(.active) {
           display: none;
         }
+        &.active {
+          width: unset;
+        }
       }
       .mobile-nav-icon {
         order: 4;
-        display: inline-block;
+        display: flex;
+        align-items: center;
         img {
           width: 34px;
         }
       }
     }
   }
+  .remainingHeader {
+    margin-top: -150px !important;
+  }
   .hero-text-box,
   .hero-text-box p {
-    width: 300px !important;
+    width: 100% !important;
   }
   .heroImage {
-    width: 275px !important;
-    top: -370px !important;
-    left: 300px !important;
+    width: 400px !important;
+    top: 450px !important;
+    left: 15% !important;
+    margin: auto;
   }
   .section-intro {
     top: -130px !important;
@@ -132,4 +144,9 @@
 /* SMALL PHONES: from 0 to 480px */
 
 @media only screen and (max-width: 480px) {
+  .heroImage {
+    width: 290px !important;
+    left: 7% !important;
+    top: 500px !important;
+  }
 }

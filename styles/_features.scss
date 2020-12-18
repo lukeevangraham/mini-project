@@ -1,9 +1,15 @@
 .section-features {
+  .section:nth-child(1) {
+    padding-bottom: 0;
+  }
+  .section:nth-child(2) {
+    padding-top: 0;
+  }
   // position: relative;
   // top: -275px;
   text-align: center;
   .topP {
-    width: 584px;
+    // width: 584px;
     text-align: center;
     margin: 0 auto 40px auto;
   }

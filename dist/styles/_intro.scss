@@ -1,15 +1,25 @@
 .section-intro {
-  width: 1117px;
-  height: 560px;
+  margin-top: 60px;
+  // width: 1117px;
+  // height: 560px;
   background: rgba(240, 99, 184, 0.15);
   border-radius: 50px;
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   // position: relative;
   // top: -200px;
   padding: 92px;
-  img {
-    position: relative;
-    left: -15%;
+  .responsiveImg {
+    width: 100%;
+    height: auto;
+    padding-right: 30px;
+  }
+  .col:nth-child(2) {
+    padding-right: 2%;
+  }
+  .parent {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 }

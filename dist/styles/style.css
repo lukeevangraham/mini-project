@@ -743,10 +743,13 @@ footer .bottom .socialLinks li {
 
 /* SMALL PHONES: from 0 to 480px */
 @media only screen and (max-width: 480px) {
+  header .remainingHeader {
+    top: 60%;
+  }
   .heroImage {
     width: 290px !important;
     left: 7% !important;
-    top: 500px !important;
+    top: 530px !important;
   }
   .section-testimonials .carousel-cell .span_3_of_12 {
     margin-top: 8%;

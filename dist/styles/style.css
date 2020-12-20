@@ -751,12 +751,26 @@ footer .bottom .socialLinks li {
     left: 7% !important;
     top: 530px !important;
   }
+  .featureCard {
+    margin: 7% 0 !important;
+    padding: 10% 0 !important;
+    height: unset !important;
+  }
   .section-testimonials .carousel-cell .span_3_of_12 {
     margin-top: 8%;
     width: 19%;
   }
   .section-testimonials .carousel-cell .span_9_of_12 {
     width: 74.6%;
+  }
+  footer .top {
+    text-align: center;
+  }
+  footer .top .buttons .btn {
+    margin: 5px 0;
+  }
+  footer .bottom {
+    padding-top: 80px;
   }
 }
 

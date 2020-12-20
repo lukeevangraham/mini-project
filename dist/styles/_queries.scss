@@ -234,6 +234,11 @@
     left: 7% !important;
     top: 530px !important;
   }
+  .featureCard {
+    margin: 7% 0 !important;
+    padding: 10% 0 !important;
+    height: unset !important;
+  }
   .section-testimonials {
     .carousel-cell {
       // padding: 20%;
@@ -244,6 +249,18 @@
       .span_9_of_12 {
         width: 74.6%;
       }
+    }
+  }
+  footer {
+    .top {
+      text-align: center;
+      .buttons {
+        .btn {
+          margin: 5px 0;
+        }
+      }
+    }.bottom {
+      padding-top: 80px;
     }
   }
 }
